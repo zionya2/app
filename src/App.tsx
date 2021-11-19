@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './images/logo.svg';
-import Form from "./components/form/Form";
-import './css/App.css';
+import ListPosts from "./components/ListPosts/ListPosts";
+import './scss/App.scss';
 
 function App() {
   
@@ -12,7 +12,7 @@ function App() {
 
   
   return (
-    Form(props)
+    ListPosts(props)
   );
 }
 
