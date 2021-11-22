@@ -1,18 +1,11 @@
 import Post from '../Post/Post';
-import Button from '../Button/Button';
+
 import "./ListPosts.scss"
 
-function  ListPosts (props:Record<string, string>) {
+function  ListPosts (props:Array<Record<string, string>>) {
     return (
-        <div className = "ListPosts">
-            <header>
-                {Button(props)}
-                {Button(props)}
-            </header>
-            <div className="listBody">
-                { Post(props)}
-                { Post(props)}
-            </div>
+        <div className = "listPosts">
+                {props.map(item => Post(item)) }
         </div>
     );
 }

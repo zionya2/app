@@ -1,8 +1,9 @@
 import './Button.scss';
 
-function Button (props:Record<string, string>) {
+type buttonProps = {title:string, onClick:any, value:string}
+function Button (props:buttonProps) {
     return (
-        <button key={props.title} >{props.title}</button>
+        <button value={props.value} key={props.title} onClick={props.onClick} >{props.title}</button>
     );
 }
 export default Button;
