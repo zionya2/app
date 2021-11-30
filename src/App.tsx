@@ -37,7 +37,7 @@ function App() {
                 {items.map( (item) => <Button key={item.title} onClick={handlerClick} value={item.title} title={item.title}/>)}
             </div>
             <div>
-                {ListPosts(activeCards)}
+                {<ListPosts data={activeCards} />}
             </div>
         </div>
     );

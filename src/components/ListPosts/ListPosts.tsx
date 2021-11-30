@@ -2,10 +2,14 @@ import Post from '../Post/Post';
 
 import "./ListPosts.scss"
 
-function  ListPosts (props:Array<Record<string, string>>) {
+type ListPostsProps = {
+    data:Array<Record<string, string>>;
+};
+
+function  ListPosts ({data}:ListPostsProps) {
     return (
         <div className = "listPosts">
-                {props.map(item => Post(item)) }
+                {data.map(item => < Post data={item}/>) }
         </div>
     );
 }
